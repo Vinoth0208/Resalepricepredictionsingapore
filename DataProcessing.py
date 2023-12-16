@@ -10,15 +10,15 @@ from geopy.geocoders import Nominatim
 def Data():
 
     data2 = pd.read_csv(
-        r'Data/ResaleFlatPricesBasedonApprovalDate2000Feb2012.csv')
+        r'https://github.com/Vinoth0208/Resalepricepredictionsingapore/Data/ResaleFlatPricesBasedonApprovalDate2000Feb2012.csv')
     data1 = pd.read_csv(
-        r'Data/ResaleFlatPricesBasedonApprovalDate19901999.csv')
+        r'https://github.com/Vinoth0208/Resalepricepredictionsingapore/Data/ResaleFlatPricesBasedonApprovalDate19901999.csv')
     data3 = pd.read_csv(
-        r'Data/ResaleFlatPricesBasedonRegistrationDateFromMar2012toDec2014.csv')
+        r'https://github.com/Vinoth0208/Resalepricepredictionsingapore/Data/ResaleFlatPricesBasedonRegistrationDateFromMar2012toDec2014.csv')
     data4 = pd.read_csv(
-        r'Data/ResaleFlatPricesBasedonRegistrationDateFromJan2015toDec2016.csv')
+        r'https://github.com/Vinoth0208/Resalepricepredictionsingapore/Data/ResaleFlatPricesBasedonRegistrationDateFromJan2015toDec2016.csv')
     data5 = pd.read_csv(
-        r'Data/ResaleflatpricesbasedonregistrationdatefromJan2017onwards.csv')
+        r'https://github.com/Vinoth0208/Resalepricepredictionsingapore/Data/ResaleflatpricesbasedonregistrationdatefromJan2017onwards.csv')
     Data = pd.concat([data1, data2, data3, data4, data5], ignore_index=True)
     print(Data)
     print(Data.info())
