@@ -65,6 +65,7 @@ def Data():
 
     Data['address'] = Data['block'].map(str) + ', ' + Data['street_name'].map(str) + ', Singapore'
     Data['flat_type'] = Data['flat_type'].replace({'MULTI-GENERATION': 'MULTI GENERATION' }, regex=True)
+    Data=Data.head(611595)
     Data.to_csv('hdb_resale.csv',index=False)
 
     st.write(Data)
