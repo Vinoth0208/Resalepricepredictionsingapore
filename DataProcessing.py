@@ -1,6 +1,6 @@
 import sys
 import numpy as np
-sys.path.insert(1, r'C:\Users\Vinoth\PycharmProjects\SingaporeResaleFlatPricesPredicting\venv\Lib\site-packages')
+sys.path.insert(1, r'SingaporeResaleFlatPricesPredicting\venv\Lib\site-packages')
 import pandas as pd
 import streamlit as st
 from geopy.geocoders import Nominatim
@@ -10,15 +10,15 @@ from geopy.geocoders import Nominatim
 def Data():
 
     data2 = pd.read_csv(
-        r'C:\Users\Vinoth\PycharmProjects\SingaporeResaleFlatPricesPredicting\Data\ResaleFlatPricesBasedonApprovalDate2000Feb2012.csv')
+        r'Data\ResaleFlatPricesBasedonApprovalDate2000Feb2012.csv')
     data1 = pd.read_csv(
-        r'C:\Users\Vinoth\PycharmProjects\SingaporeResaleFlatPricesPredicting\Data\ResaleFlatPricesBasedonApprovalDate19901999.csv')
+        r'Data\ResaleFlatPricesBasedonApprovalDate19901999.csv')
     data3 = pd.read_csv(
-        r'C:\Users\Vinoth\PycharmProjects\SingaporeResaleFlatPricesPredicting\Data\ResaleFlatPricesBasedonRegistrationDateFromMar2012toDec2014.csv')
+        r'Data\ResaleFlatPricesBasedonRegistrationDateFromMar2012toDec2014.csv')
     data4 = pd.read_csv(
-        r'C:\Users\Vinoth\PycharmProjects\SingaporeResaleFlatPricesPredicting\Data\ResaleFlatPricesBasedonRegistrationDateFromJan2015toDec2016.csv')
+        r'Data\ResaleFlatPricesBasedonRegistrationDateFromJan2015toDec2016.csv')
     data5 = pd.read_csv(
-        r'C:\Users\Vinoth\PycharmProjects\SingaporeResaleFlatPricesPredicting\Data\ResaleflatpricesbasedonregistrationdatefromJan2017onwards.csv')
+        r'Data\ResaleflatpricesbasedonregistrationdatefromJan2017onwards.csv')
     Data = pd.concat([data1, data2, data3, data4, data5], ignore_index=True)
     print(Data)
     print(Data.info())

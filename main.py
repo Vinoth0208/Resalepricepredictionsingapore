@@ -3,7 +3,7 @@ import streamlit as st
 from DataProcessing import Data
 from Plottingandcharts import plots
 from Predict import predict
-sys.path.insert(1, r'C:\Users\Vinoth\PycharmProjects\SingaporeResaleFlatPricesPredicting\venv\Lib\site-packages')
+sys.path.insert(1, r'SingaporeResaleFlatPricesPredicting\venv\Lib\site-packages')
 import streamlit_option_menu
 
 st.set_page_config(layout="wide",page_title="SingaporeResaleFlatPricesprediction")
