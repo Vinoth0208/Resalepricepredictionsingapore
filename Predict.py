@@ -55,7 +55,7 @@ def predict():
     dataframe = dataframe.drop('max_storey', axis=1)
     dataframe = dataframe.drop('remaining_lease', axis=1)
 
-    dataframe.to_csv(r'd.csv')
+
 
     tab1, tab2=st.tabs(["Model predictions perfomance", "Predict"])
     with tab1:
@@ -143,8 +143,9 @@ def predict():
             dataframe=pd.DataFrame(df, index=[0])
             dataframe['town'] = dataframe['town'].replace(townDict, regex=True)
             dataframe['flat_type'] = dataframe['flat_type'].replace(flat_typeDict, regex=True)
-            s_scaler = StandardScaler()
-            X_test = s_scaler.fit_transform(dataframe.astype(np.float64))
+            # s_scaler = StandardScaler()
+            # X_test = s_scaler.fit_transform(dataframe.astype(np.float64))
+            X_test=dataframe
             predictions = knn.predict(X_test)
             predictions=pd.DataFrame(predictions)
             st.write("Re-sale price:",predictions[0][0])
